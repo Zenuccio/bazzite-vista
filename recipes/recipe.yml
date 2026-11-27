@@ -33,6 +33,14 @@ modules:
         - kdecoration-devel
         - layer-shell-qt-devel
         - libepoxy-devel
+        - libdrm-devel
+        - mesa-libEGL-devel
+        - mesa-libGL-devel
+        - mesa-libgbm-devel
+        - libinput-devel
+        - libxkbcommon-devel
+        - pipewire-devel
+        - systemd-devel
         - polkit-devel
         - polkit-qt6-1-devel
         - xcb-util-wm-devel
