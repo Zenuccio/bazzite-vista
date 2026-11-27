@@ -33,6 +33,8 @@ modules:
         - kdecoration-devel
         - layer-shell-qt-devel
         - libepoxy-devel
+        - polkit-devel
+        - polkit-qt6-1-devel
         - xcb-util-wm-devel
         - xcb-util-image-devel
         - xcb-util-keysyms-devel
