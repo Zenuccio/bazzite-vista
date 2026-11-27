@@ -55,8 +55,10 @@ modules:
     snippets:
       - |
         set -euo pipefail
-        REPO="https://github.com"
-        git clone --depth=1 -b Plasma/6.8 "$REPO" /tmp/vtp
+        HOST="github.com"
+        OWNER="aeroshell-desktop"
+        PROJECT="vistathemeplasma.git"
+        git clone --depth=1 -b Plasma/6.8 "https://${HOST}/${OWNER}/${PROJECT}" /tmp/vtp
         cd /tmp/vtp
         sed -i 's/sudo //g' install.sh
         export CMAKE_GENERATOR=Ninja
