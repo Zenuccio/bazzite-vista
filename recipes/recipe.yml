@@ -27,6 +27,8 @@ modules:
         - plasma-workspace-devel
         - kwin-devel
         - libplasma-devel
+        - libksysguard-devel
+        - kscreenlocker-devel
         - plasma-activities-devel
         - plasma-activities-stats-devel
         - plasma5support-devel
