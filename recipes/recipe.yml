@@ -113,9 +113,9 @@ modules:
     snippets:
       - |
         set -euo pipefail
-        printf '#!/bin/sh\nexec "$@"\n' > /usr/local/bin/sudo
-        chmod +x /usr/local/bin/sudo
-        export PATH="/usr/local/bin:$PATH"
+        printf '#!/bin/sh\nexec "$@"\n' > /tmp/sudo
+        chmod +x /tmp/sudo
+        export PATH="/tmp:$PATH"
         HOST="github.com"
         OWNER="aeroshell-desktop"
         PROJECT="vistathemeplasma.git"
@@ -125,6 +125,6 @@ modules:
         export LIBEXEC_DIR=libexec
         export UAC_LIBEXEC_DIR=libexec/kf6
         yes | bash install.sh
-        rm -f /usr/local/bin/sudo
+        rm -f /tmp/sudo
 
   - type: signing
