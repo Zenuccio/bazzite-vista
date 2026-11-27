@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://blue-build.org
 name: bazzite-vista
-description: Custom Bazzite image with VistaThemePlasma (Windows Vista shell for KDE Plasma).
+description: Custom Bazzite image with VistaThemePlasma.
 
 base-image: ghcr.io/ublue-os/bazzite
 image-version: stable
@@ -55,10 +55,14 @@ modules:
     snippets:
       - |
         set -euo pipefail
-        git clone --depth=1 -b Plasma/6.8 'https://github.com' /tmp/vtp
+        REPO="https://github.com"
+        git clone --depth=1 -b Plasma/6.8 "$REPO" /tmp/vtp
         cd /tmp/vtp
         sed -i 's/sudo //g' install.sh
-        yes | CMAKE_GENERATOR=Ninja LIBEXEC_DIR=libexec UAC_LIBEXEC_DIR=libexec/kf6 bash install.sh
+        export CMAKE_GENERATOR=Ninja
+        export LIBEXEC_DIR=libexec
+        export UAC_LIBEXEC_DIR=libexec/kf6
+        yes | bash install.sh
         rm -rf /tmp/vtp
 
   - type: signing
