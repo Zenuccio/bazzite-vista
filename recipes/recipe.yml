@@ -15,6 +15,7 @@ modules:
     install:
       packages:
         - gdisk
+        - kvantum
         - python3-devel
         - wayland-devel
         - wayland-protocols-devel
