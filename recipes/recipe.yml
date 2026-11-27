@@ -46,7 +46,10 @@ modules:
         - kf6-sonnet-devel
         - kf6-kirigami-devel
         - qt6-qtbase-devel
+        - qt6-qtbase-private-devel
         - qt6-qtdeclarative-devel
+        - qt6-qtdeclarative-private-devel
+        - qt6-qtwayland-devel
         - qt6-qtsvg-devel
         - qt6-qttools-devel
         - qt6-qt5compat-devel
