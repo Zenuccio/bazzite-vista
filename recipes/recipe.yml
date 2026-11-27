@@ -113,15 +113,18 @@ modules:
     snippets:
       - |
         set -euo pipefail
+        printf '#!/bin/sh\nexec "$@"\n' > /usr/local/bin/sudo
+        chmod +x /usr/local/bin/sudo
+        export PATH="/usr/local/bin:$PATH"
         HOST="github.com"
         OWNER="aeroshell-desktop"
         PROJECT="vistathemeplasma.git"
         git clone --depth=1 -b Plasma/6.8 "https://${HOST}/${OWNER}/${PROJECT}" /usr/share/vtp-source
         cd /usr/share/vtp-source
-        find . -type f -name "*.sh" -exec sed -i 's/\bsudo\b//g' {} +
         export CMAKE_GENERATOR=Ninja
         export LIBEXEC_DIR=libexec
         export UAC_LIBEXEC_DIR=libexec/kf6
         yes | bash install.sh
+        rm -f /usr/local/bin/sudo
 
   - type: signing
