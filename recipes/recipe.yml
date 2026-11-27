@@ -27,6 +27,9 @@ modules:
         - plasma-workspace-devel
         - kwin-devel
         - libplasma-devel
+        - plasma-activities-devel
+        - plasma-activities-stats-devel
+        - plasma5support-devel
         - kdecoration-devel
         - layer-shell-qt-devel
         - libepoxy-devel
