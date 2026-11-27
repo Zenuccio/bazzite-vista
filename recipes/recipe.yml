@@ -134,7 +134,8 @@ modules:
         export CMAKE_GENERATOR=Ninja
         export LIBEXEC_DIR=libexec
         export UAC_LIBEXEC_DIR=libexec/kf6
-        yes | bash install.sh
+        yes | bash install.sh || true
+        test -d /usr/lib64/qt6/qml/vistathemeplasma
         rm -f /tmp/sudo
 
   - type: signing
